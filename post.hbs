@@ -1,0 +1,10 @@
+{{!< default}}
+
+{{#post}}
+  <h1 class="font-extrabold text-4xl mb-2 leading-tight">{{title}}</h1>
+  <time class="text-lg font-semibold text-gray-800" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+  <p class="text-gray-600">{{reading_time}}</p>
+  <div class="ghost-content mt-10">
+    {{content}}
+  </div>
+{{/post}}

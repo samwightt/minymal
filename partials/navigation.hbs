@@ -1,0 +1,5 @@
+<div class="flex flex-row space-x-1 items-center">
+  {{#foreach navigation}}
+  <a class="text-sm py-2 px-3 rounded-md transition duration-300 {{#if current}}bg-black text-white hover:bg-gray-800 hover:text-white{{else}}text-black hover:text-black hover:bg-gray-300{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+  {{/foreach}}
+</div>

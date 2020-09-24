@@ -1,0 +1,30 @@
+{{!< default }}
+{{#contentFor "header"}}
+<div class="py-32 gradient-header">
+    <div class="container mx-auto max-w-md flex flex-col items-center">
+        <h1 class="mt-8 text-2xl text-gray-900 uppercase font-extrabold font-open text-center">Blog</h1>
+        <h2 class="mt-1 text-center leading-normal font-light text-gray-600">Thoughts, ideas, opinions.</h2>
+    </div>
+</div>
+{{/contentFor}}
+
+{{#contentFor "customTitle"}}
+Blog
+{{/contentFor}}
+
+{{#foreach posts}}
+    <article class="my-16">
+        <header>
+            <h2 class="text-3xl font-bold text-black hover:text-blue-600 transition duration-200 mb-2"><a href="{{url}}">{{title}}</a></h2>
+            <time class=" font-semibold text-gray-800" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+            <p class="text-gray-600">{{reading_time}}</p>
+        </header>
+        <section class="ghost-content">
+            <p>{{excerpt words="50"}}</p>
+        </section>
+        <a class="font-semibold text-gray-700 border-b-2 pb-1 border-gray-500 hover:text-blue-600 hover:border-blue-700 transition duration-200" href="{{url}}">Continue Reading</a>
+    </article>
+
+{{/foreach}}
+
+{{pagination}}

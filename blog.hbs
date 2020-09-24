@@ -1,0 +1,19 @@
+{{!< default}}
+{{#contentFor "header"}}
+<div class="py-32 gradient-header">
+    <div class="container mx-auto max-w-md flex flex-col items-center">
+        {{#if @site.icon}}
+        <img class="rounded-full shadow-xl w-48 h-48" src="{{img_url @site.icon size="s"}}"/>
+        {{/if}}
+        <h1 class="mt-8 text-2xl text-gray-900 uppercase font-extrabold font-open text-center">{{@site.title}}</h1>
+        <h2 class="mt-1 text-center leading-normal font-light text-gray-600">{{@site.description}}</h2>
+    </div>
+</div>
+{{/contentFor}}
+
+{{#page}}
+  <h1 class="font-extrabold text-4xl mb-4 leading-tight">{{title}}</h1>
+  <article class="ghost-content">
+    {{content}}
+  </article>
+{{/page}}
